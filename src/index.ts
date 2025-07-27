@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import usersRoute from "./routes/users";
+import vehiclesRoute from "./routes/vehicles";
 
 const app = new Hono();
 
@@ -8,5 +9,6 @@ app.get("/", (c) => {
 });
 
 app.route("/users", usersRoute);
+app.route("/vehicles", vehiclesRoute);
 
 export default app;
